@@ -33,7 +33,22 @@ const DairyPage = () => {
 };
 
 const styles = {
-  ... // same styles as above
+  container: { padding: '30px', textAlign: 'center' },
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+    gap: '20px', marginTop: '20px',
+  },
+  card: {
+    border: '1px solid #ccc', borderRadius: '12px',
+    padding: '15px', backgroundColor: '#fff',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+  },
+  button: {
+    marginTop: '10px', padding: '10px 15px',
+    backgroundColor: '#2e7d32', color: '#fff',
+    border: 'none', borderRadius: '6px', cursor: 'pointer',
+  },
 };
 
 export default DairyPage;
