@@ -1,20 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
 import HomePage from './components/HomePage';
-import ProductCategories from './components/ProductCategories';
-import CartPage from './components/CartPage';
+import FruitsPage from './components/FruitsPage'; // ✅ Added FruitsPage
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/products" element={<ProductCategories />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/products/fruits" element={<FruitsPage />} /> {/* ✅ Fruits Route */}
       </Routes>
     </Router>
   );
